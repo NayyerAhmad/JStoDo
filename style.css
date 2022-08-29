@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    padding: 10px;
+    border: 1px solid black;
+    width: 40%;
+    margin: auto;
+}
+
+.container .input{
+    width: 86%;
+    height: 20px;
+}
+
+.container .btn {
+    width: 50px;
+    height: 25px;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container li{
+    color: red;
+}
+
+.container li a {
+    float: right;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container #error{
+    color: red;
+    font-size: 14px;
+}

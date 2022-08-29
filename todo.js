@@ -1,0 +1,39 @@
+function addMore(){
+    document.getElementById('error').innerHTML="";
+
+    let name = document.getElementById('name').value;
+    if(name=='') {
+        document.getElementById('error').innerHTML="Please enter value";
+    }else{
+        let box=document.getElementById('box');
+
+        let li=document.createElement('li');
+        li.textContent=name;
+
+        let a=document.createElement('a');
+        a.textContent="x";
+        a.href="javascript:void(0)";
+        a.className="remove";
+        li.appendChild(a);
+        
+        let pos=box.firstElementChild;
+
+        // add data according to which was added first and keep in mind if it is empty
+        if(pos==null) {
+            box.appendChild(li);
+
+        }else{
+            box.insertBefore(li,pos);
+        }
+        }
+        // remove data after adding
+        document.getElementById('name').value="";
+}
+// make the cross functional
+let btn=document.querySelector('ul');;
+btn.addEventListener('click',function(e) {
+    let box=document.getElementById('box');
+    let li=e.target.parentNode;
+    box.removeChild(li);
+
+});
